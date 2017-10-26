@@ -1,21 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'favorite'
- 
-  ,template:`
- 
-  <div (click)="onClick();">
-    <span [class]="favorite"></span>
-  </div>
+  selector: 'favorite',  
+  templateUrl: './favorite.component.html',
+  styleUrls:['./favorite.component.css']
 
-  `
+  
 })
 export class FavoriteComponent implements OnInit {
 
-  fullStar = "glyphicon glyphicon-star";
-  emptyStar = "glyphicon glyphicon-star-empty";
-  isFavorite = true;
+  
+  isFavorite: boolean;
 
   favorite = "glyphicon glyphicon-star";
 
@@ -27,11 +22,9 @@ export class FavoriteComponent implements OnInit {
   }
 
   onClick(){
-    this.favorite = "";
-
+    
     this.isFavorite = !this.isFavorite;
     
-    this.favorite = (this.isFavorite) ? this.fullStar : this.emptyStar;
-
+    
   }
 }
