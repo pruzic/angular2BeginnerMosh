@@ -18,7 +18,11 @@ import{Component} from '@angular/core';
     {{course.price | currency:'USD':true: '3.2-2'}}<br/>
     {{course.releaseDate | date:'shortDate'}}<br/>
     <br/>
-     {{ text | summary:20}}
+   
+    {{ text | summary:20}}
+
+   <!-- <img [src]="title" /> -->
+
         `
 })
 
