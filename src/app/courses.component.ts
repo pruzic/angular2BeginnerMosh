@@ -5,7 +5,8 @@ import{Component} from '@angular/core';
 
 @Component({
     selector: 'courses',
-    template: `       
+    template: `   
+    <!--    
     <input [(ngModel)] = "email" (keyup.enter)="onKeyUp()"/>
     <br/>
     <br/>
@@ -20,16 +21,23 @@ import{Component} from '@angular/core';
     <br/>
    
     {{ text | summary:20}}
+   
+    <img [src]="title" /> 
+    
+    -->
 
-   <!-- <img [src]="title" /> -->
+    <img src="{{imageUrl}}"/>
+    <img [src]="title"/>
 
-        `
+
+    `
 })
 
 
 export class CoursesComponent{
     title = "List of courses";
     courses; 
+    imageUrl = "http://lorempixel.com/400/200";
    
     constructor(service: CoursesService, ){
        this.courses = service.getCourses();       
