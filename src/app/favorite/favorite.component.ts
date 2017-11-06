@@ -16,6 +16,7 @@ export class FavoriteComponent {
   @Input('is-favorite') isFavorite: boolean;
   //component output field alias
   @Output('change') click = new EventEmitter();
+  
   favorite = "glyphicon glyphicon-star";
 
 
